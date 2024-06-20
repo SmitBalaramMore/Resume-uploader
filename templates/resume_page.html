@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME UPLOADER BY SMIT</title>
+    <style>
+        *{
+            color:rgb(201, 236, 252);                                                                                                                                                          
+        }
+        body {
+            background-color: rgb(53, 133, 170);
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-transform: capitalize;
+            height: 100%;
+            width: 100%;
+
+        }
+
+        #main {
+            height: auto;
+            width: 70%;
+            background-color: rgb(36, 82, 104);
+            margin-top: 2%;
+            border-radius: 10px;
+            padding: 3%;
+
+        }
+        #profileimg{
+            width:90px;
+            height:90px;
+            margin: 5%;
+            border-radius:5px ;
+
+        }
+        span{
+            margin: 20px;
+            font-size:2.5vw;
+        }
+        h1{
+            font-size:3vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Candidate information</h1>
+    <div id="main">
+        
+        <img id="profileimg" src="{{data.profile.url}}"/>
+        <p>
+            <span>Name: {{data.name}}</span>
+        </p>
+        <p>
+            <span>Skills: {{data.skills}}</span>
+        
+            <span>Date of Birth: {{data.date}}</span>
+        </p>
+        <p>
+            <span>Gender: {{data.genders}}</span>
+            <span>city: {{data.city}}</span>
+        </p>
+        <p>
+            <span>state: {{data.state}}</span>
+            <span>pin code: {{data.pin}}</span>
+        </p>
+        <p>
+            <span>Preffered city: {{data.job_city}}</span>
+        </p>
+        <p>
+            <span>Mobile no: {{data.mobile}}</span>
+            <span>Email id: {{data.email}}</span>
+        </p>
+        <p>
+            <span>Resume: <a href="{{data.my_file.url}}" target="_blank">Resume</a></span>
+        </p>
+        
+
+        
+    </div>
+
+</body>
+
+</html>

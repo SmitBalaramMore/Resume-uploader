@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME UPLOADER BY SMIT</title>
+    <style>
+        body {
+            background-color: rgb(53, 133, 170);
+            color: rgb(201, 236, 252);
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #main {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box {
+            background-color: rgb(36, 82, 104);
+            height: auto;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        #profileimg {
+            height: 9vh;
+            width: 8vw;
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(201, 236, 252);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>List of candidates</h1>
+    {% for i in candidates %}
+    <div id="main">
+        <div id="box">
+            <h3><a href="resume/{{ i.id }}">{{i.name}}</a></h3><img id="profileimg" src="{{i.profile.url}}">
+        </div>
+    </div>
+
+    {% endfor %}
+
+
+
+
+</body>
+
+</html>

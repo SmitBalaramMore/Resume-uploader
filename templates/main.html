@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME UPLOADER BY SMIT</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color:rgb(53, 133, 170);
+        }
+        #main{
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.7vw;
+            color:rgb(201, 236, 252);
+            
+ 
+        }
+        #centerbox{
+            width: 70%;
+            text-align: justify;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(36, 82, 104);
+            margin-left: 16%;
+            padding: 15px;
+            border-radius: 10px;
+
+        }
+
+        #btnsubmit{
+            background-color: #c2fbd7;
+            border-radius: 100px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+                        
+        }
+        #id_genders{
+            list-style-type:none;
+            display:flex;
+        }
+        
+    </style>
+   
+</head>
+<body>
+{% block content %}
+    <div id="main">
+    
+        <h2>RESUME UPLOADER</h2>
+        <div id="centerbox">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ formed.as_p }}
+
+                <button id="btnsubmit"  type="submit">Submit</button>
+            </form>
+        </div>
+    
+
+
+    </div>
+{% endblock %}
+    
+</body>
+</html>
